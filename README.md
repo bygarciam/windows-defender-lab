@@ -1,23 +1,23 @@
 # Hands-on Lab: Windows Defender (AV Baseline + Scheduled Scan)
 
-## Why this matters (Security)
+## 🔐 Why this matters (Security)
 Microsoft Defender is a core endpoint security control for **malware prevention, detection, and response**.  
 In banking/regulated environments, having Defender **enabled, updated, and validated with evidence** supports **security hygiene, audit readiness, and incident prevention**.
 
-## Objectives
+## 🎯 Objectives
 - Confirm Defender core protections are enabled (Real-time protection)
 - Validate Defender is updated (Security intelligence / Protection updates)
 - Run an on-demand scan (Quick scan)
 - Create a scheduled scan using Task Scheduler (weekly full scan)
 - Validate detection visibility using the EICAR test file (Protection history)
 
-## Environment
+## 🖥️ Environment
 - Hypervisor: **VMware Workstation**
 - OS: **Windows Server 2022**
 - Security tool: **Microsoft Defender Antivirus**
 - Scheduler: **Windows Task Scheduler**
 
-## Lab Steps (Summary)
+## 🧪 Lab Steps (Summary)
 1. Open **Windows Security → Virus & threat protection**
 2. Run a **Quick scan** to validate on-demand scanning works
 3. Confirm **Real-time protection** is **ON**
@@ -30,7 +30,7 @@ In banking/regulated environments, having Defender **enabled, updated, and valid
 6. Validate the task appears in Task Scheduler and will run on schedule
 7. (Validation) Download the **EICAR** test file and confirm Defender logs it in **Protection history**
 
-## Evidence (Screenshots)
+## 📸 Evidence (Screenshots)
 | Step | Screenshot |
 |------|------------|
 | Protection updates (Security intelligence up to date) | ![](screenshots/01%20-%20Protection%20updates.jpg) |
@@ -44,7 +44,7 @@ In banking/regulated environments, having Defender **enabled, updated, and valid
 | Task created (visible in Task Scheduler library) | ![](screenshots/09%20-%20Task%20created%20and%20visible%20in%20Task%20Scheduler%20library.jpg) |
 | Protection history showing EICAR detection | ![](screenshots/10%20-%20Protection%20history%20showing%20%20EICAR%20detection.jpg) |
 
-## Commands / Configuration used
+## ⌨️ Commands / Configuration used
 
 ### Defender scheduled scan (Task Scheduler Action)
 **Program/script:**
@@ -56,7 +56,7 @@ In banking/regulated environments, having Defender **enabled, updated, and valid
 
 > In this lab, the scheduled task was configured for a **weekly Full Scan**.
 
-## Key Takeaways
+## 💡 Key Takeaways
 - Defender must be **enabled and up to date** to reduce exposure to commodity malware and known threats.
 - Running an **on-demand scan** and confirming **real-time protection** verifies baseline endpoint security posture.
 - Scheduling scans via **Task Scheduler + MpCmdRun.exe** ensures consistent hygiene and repeatable controls.
